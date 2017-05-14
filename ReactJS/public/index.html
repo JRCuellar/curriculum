@@ -17,7 +17,6 @@
 
 		.container{
 			margin: 0px;
-			padding: 0px;
 			padding: 15px;
 			background: rgba(255,169,94,1);
 			background: -moz-linear-gradient(top, rgba(255,169,94,1) 0%, rgba(150,15,0,1) 100%);
@@ -26,6 +25,18 @@
 			background: -o-linear-gradient(top, rgba(255,169,94,1) 0%, rgba(150,15,0,1) 100%);
 			background: -ms-linear-gradient(top, rgba(255,169,94,1) 0%, rgba(150,15,0,1) 100%);
 			background: linear-gradient(to bottom, rgba(255,169,94,1) 0%, rgba(150,15,0,1) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa95e', endColorstr='#960f00', GradientType=0 );
+		}
+
+		.container_2{
+			margin: 0px;
+			padding: 15px;
+			background: rgba(150,15,0,1);
+			background: -moz-linear-gradient(top, rgba(150,15,0,1) 0%, rgba(74,74,74,1) 66%, rgba(74,74,74,1) 100%);
+			background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(150,15,0,1)), color-stop(66%, rgba(74,74,74,1)), color-stop(100%, rgba(74,74,74,1)));
+			background: -webkit-linear-gradient(top, rgba(150,15,0,1) 0%, rgba(74,74,74,1) 66%, rgba(74,74,74,1) 100%);
+			background: -o-linear-gradient(top, rgba(150,15,0,1) 0%, rgba(74,74,74,1) 66%, rgba(74,74,74,1) 100%);
+			background: -ms-linear-gradient(top, rgba(150,15,0,1) 0%, rgba(74,74,74,1) 66%, rgba(74,74,74,1) 100%);
+			background: linear-gradient(to bottom, rgba(150,15,0,1) 0%, rgba(74,74,74,1) 66%, rgba(74,74,74,1) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#960f00', endColorstr='#4a4a4a', GradientType=0 );
 		}
 
 		.caja{
@@ -38,25 +49,74 @@
 			font-size:90%;
 		}
 
+		.caja_2{
+			display:block;
+			border: 1px solid #333;
+			border-radius: 5px;
+			background: rgba(255,255,255,0.8);
+			padding: 15px;
+			color: #333;
+			font-size:90%;
+			height:360px;
+		}
+
 		.caja img{
 			border-radius: 70%;
-			width:30%;
+			width:100px;
+			height:100px;
 			float:left;
 			margin:10px;
 			
 		}
 
-		.caja ul{
+		ul{
 			vertical-align: top;
 			list-style-type: none;
 			padding:0px;
 		}
 
-		.caja ul li b {color: rgb(150,15,0);}
+		.caja ul li b {color: rgb(150,15,0); width: 200px; float:left;}
+
+		.tecnologia{
+			width:200px;
+			height:30px;
+			float:left;
+			color:#333;
+			padding:3px;
+			margin:10px;
+		}
+
+		a{
+			color: #333;
+		}
+
+		.footer{
+			margin: 0px;
+			padding: 15px;
+			background: #000;
+			color: #fff;
+		}
+		.footer_react{
+			color: #00d8ff;
+		}
+
+		.footer img{
+			width:50px;
+			height:45px;
+			vertical-align: middle;
+		}
 	</style>
 </head>
   <body>
     <div id="container"></div>
+    <div id="container_2"></div>
+    <div class="footer">
+		<h1>Creado en:</h1>
+		<div class="footer_react">
+			<img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png" title="React" /> React
+		</div>
+	</div>
+
     <script type="text/javascript" src="build.js"></script>
   </body>
 </html>

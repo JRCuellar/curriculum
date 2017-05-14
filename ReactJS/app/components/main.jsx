@@ -10,10 +10,8 @@ class DatosPersonales extends React.Component{
   			sexo: 			"Hombre",
   			fnacimiento: 	"27/03/1981",
   			email: 			"javier.ramos.cuellar@gmail.com",
-  			direccion: 		"Avenida vía lactea nº 11 3-E",
   			poblacion: 		"Móstoles",
   			provincia: 		"Madrid",
-  			cp: 			"28938",
   			telefono: 		"667671082"
   		}
   }
@@ -29,10 +27,8 @@ class DatosPersonales extends React.Component{
 					<li><b>Sexo:</b><br/>&nbsp;&nbsp;{this.state.sexo}</li>
 					<li><b>Fecha de nacimiento:</b><br/>&nbsp;&nbsp;{this.state.fnacimiento}<br/><br/></li>					
 					<li><b>Email:</b><br/>&nbsp;&nbsp;{this.state.email}</li>
-					<li><b>Dirección:</b><br/>&nbsp;&nbsp;{this.state.direccion}</li>
 					<li><b>Población:</b><br/>&nbsp;&nbsp;{this.state.poblacion}</li>
 					<li><b>Provincia:</b><br/>&nbsp;&nbsp;{this.state.provincia}</li>
-					<li><b>Código Postal:</b><br/>&nbsp;&nbsp;{this.state.cp}</li>
 					<li><b>Teléfono:</b><br/>&nbsp;&nbsp;{this.state.telefono}</li>
 				</ul>
 			</div>
@@ -41,7 +37,53 @@ class DatosPersonales extends React.Component{
   }
 }
 
+class Tecnologias extends React.Component{
+  render(){
+    var tecnoList=[
+        {name: "React", url: "https://facebook.github.io/react/"},
+        {name: "AngularJS", url: "https://angularjs.org/"},
+        {name: "Ionic", url: "https://ionicframework.com/"},
+        {name: "Typescript", url: "https://www.typescriptlang.org/"},
+        {name: "NodeJS", url: "https://nodejs.org/es/"},
+        {name: "PHP", url: "http://www.php.net/"}
+    ];
+
+    return (
+        <div className="container_2">
+        <h1>Tecnologías conocidas:</h1>
+        <div className="caja_2">
+            <Tecnologia tecno={tecnoList} />
+        </div>  
+        </div>
+    );
+  }
+}
+
+class Tecnologia extends React.Component{
+  render(){
+     console.log('Renderizando el componente Tecnologia')
+     var tecno = this.props.tecno.map(function (data) {
+      
+      return (
+        <li className="tecnologia">
+              &#x2771; {data.name} <br/>
+              <a href="{data.url}" title="{data.name}">{data.url}</a>
+        </li>
+      );
+    });
+
+    return(
+      <ul>{tecno}</ul>
+      )
+  }
+}
+
 ReactDOM.render(
   <DatosPersonales />,
   document.getElementById('container')
+);
+
+ReactDOM.render(
+  <Tecnologias />,
+  document.getElementById('container_2')
 );

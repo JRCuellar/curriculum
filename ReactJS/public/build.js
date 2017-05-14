@@ -77,10 +77,8 @@
 	      sexo: "Hombre",
 	      fnacimiento: "27/03/1981",
 	      email: "javier.ramos.cuellar@gmail.com",
-	      direccion: "Avenida vía lactea nº 11 3-E",
 	      poblacion: "Móstoles",
 	      provincia: "Madrid",
-	      cp: "28938",
 	      telefono: "667671082"
 	    };
 	    return _this;
@@ -160,18 +158,6 @@
 	              _react2.default.createElement(
 	                'b',
 	                null,
-	                'Direcci\xF3n:'
-	              ),
-	              _react2.default.createElement('br', null),
-	              '\xA0\xA0',
-	              this.state.direccion
-	            ),
-	            _react2.default.createElement(
-	              'li',
-	              null,
-	              _react2.default.createElement(
-	                'b',
-	                null,
 	                'Poblaci\xF3n:'
 	              ),
 	              _react2.default.createElement('br', null),
@@ -196,18 +182,6 @@
 	              _react2.default.createElement(
 	                'b',
 	                null,
-	                'C\xF3digo Postal:'
-	              ),
-	              _react2.default.createElement('br', null),
-	              '\xA0\xA0',
-	              this.state.cp
-	            ),
-	            _react2.default.createElement(
-	              'li',
-	              null,
-	              _react2.default.createElement(
-	                'b',
-	                null,
 	                'Tel\xE9fono:'
 	              ),
 	              _react2.default.createElement('br', null),
@@ -223,7 +197,84 @@
 	  return DatosPersonales;
 	}(_react2.default.Component);
 
+	var Tecnologias = function (_React$Component2) {
+	  _inherits(Tecnologias, _React$Component2);
+
+	  function Tecnologias() {
+	    _classCallCheck(this, Tecnologias);
+
+	    return _possibleConstructorReturn(this, (Tecnologias.__proto__ || Object.getPrototypeOf(Tecnologias)).apply(this, arguments));
+	  }
+
+	  _createClass(Tecnologias, [{
+	    key: 'render',
+	    value: function render() {
+	      var tecnoList = [{ name: "React", url: "https://facebook.github.io/react/" }, { name: "AngularJS", url: "https://angularjs.org/" }, { name: "Ionic", url: "https://ionicframework.com/" }, { name: "Typescript", url: "https://www.typescriptlang.org/" }, { name: "NodeJS", url: "https://nodejs.org/es/" }, { name: "PHP", url: "http://www.php.net/" }];
+
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'container_2' },
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'Tecnolog\xEDas conocidas:'
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'caja_2' },
+	          _react2.default.createElement(Tecnologia, { tecno: tecnoList })
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Tecnologias;
+	}(_react2.default.Component);
+
+	var Tecnologia = function (_React$Component3) {
+	  _inherits(Tecnologia, _React$Component3);
+
+	  function Tecnologia() {
+	    _classCallCheck(this, Tecnologia);
+
+	    return _possibleConstructorReturn(this, (Tecnologia.__proto__ || Object.getPrototypeOf(Tecnologia)).apply(this, arguments));
+	  }
+
+	  _createClass(Tecnologia, [{
+	    key: 'render',
+	    value: function render() {
+	      console.log('Renderizando el componente Tecnologia');
+	      var tecno = this.props.tecno.map(function (data) {
+
+	        return _react2.default.createElement(
+	          'li',
+	          { className: 'tecnologia' },
+	          '\u2771 ',
+	          data.name,
+	          ' ',
+	          _react2.default.createElement('br', null),
+	          _react2.default.createElement(
+	            'a',
+	            { href: '{data.url}', title: '{data.name}' },
+	            data.url
+	          )
+	        );
+	      });
+
+	      return _react2.default.createElement(
+	        'ul',
+	        null,
+	        tecno
+	      );
+	    }
+	  }]);
+
+	  return Tecnologia;
+	}(_react2.default.Component);
+
 	_reactDom2.default.render(_react2.default.createElement(DatosPersonales, null), document.getElementById('container'));
+
+	_reactDom2.default.render(_react2.default.createElement(Tecnologias, null), document.getElementById('container_2'));
 
 /***/ }),
 /* 1 */
