@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+
+body{
+	font-family: arial;
+	color:#888;
+	margin:0px;
+}
+
+h1{
+	font-size:120%;
+	color: #fff;
+}
+
+ul{
+	vertical-align: top;
+	list-style-type: none;
+	padding:0px;
+}
+
+a{
+	color: #333;
+}
