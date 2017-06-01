@@ -8,11 +8,13 @@ import { HttpModule }               from '@angular/http';
 //-------------------------------------------------------------------------
 import { AppComponent }             from './app.component';
 import { DatosPersonalesComponent } from './datos-personales/datos-personales.component';
+import { TecnologiasComponent }     from './tecnologias/tecnologias.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DatosPersonalesComponent
+    DatosPersonalesComponent,
+    TecnologiasComponent
   ],
   imports: [
     BrowserModule,

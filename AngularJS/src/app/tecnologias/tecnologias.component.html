@@ -1,0 +1,11 @@
+<div class="container_2">
+        <h1>Tecnologías conocidas:</h1>
+        <div class="caja_2">
+        	<ul>
+				<li class="tecnologia" *ngFor="let elem of tecnoList">
+				    &#187; {{elem.name}} <br/>
+				    <a href="{{elem.url}}" title="{{elem.name}}">{{elem.url}}</a>
+				</li>
+			</ul>
+		</div>  
+</div>

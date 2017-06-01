@@ -7,20 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DatosPersonalesComponent implements OnInit {
 
-  public nombre: string;
-  public sexo:   string;
-  public email:  string;
-  public poblacion: string;
-  public provincia: string;
-  public telefono: string;
+  public nombre:        string;
+  public sexo:          string;
+  public fnacimiento:   string;
+  public email:         string;
+  public poblacion:     string;
+  public provincia:     string;
+  public telefono:      string;
 
   constructor() { 
-		this.nombre = "Javier Ramos Cuellar";
-		this.sexo   = "Hombre";
-		this.email 	= "javier.ramos.cuellar@gmail.com";
-		this.poblacion = "Móstoles";
-		this.provincia = "Madrid";
-		this.telefono  = "667671082"
+		this.nombre       = "Javier Ramos Cuellar";
+		this.sexo         = "Hombre";
+    this.fnacimiento  = "27/03/1981";
+		this.email 	      = "javier.ramos.cuellar@gmail.com";
+		this.poblacion    = "Móstoles";
+		this.provincia    = "Madrid";
+		this.telefono     = "667671082"
   }
 
   ngOnInit() {}
