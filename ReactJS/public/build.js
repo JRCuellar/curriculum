@@ -333,11 +333,7 @@
 	            data.from,
 	            ')'
 	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            data.description
-	          )
+	          _react2.default.createElement('p', { dangerouslySetInnerHTML: { __html: data.description } })
 	        );
 	      });
 
@@ -352,11 +348,61 @@
 	  return Experiencia;
 	}(_react2.default.Component);
 
+	var Footer = function (_React$Component6) {
+	  _inherits(Footer, _React$Component6);
+
+	  function Footer() {
+	    _classCallCheck(this, Footer);
+
+	    return _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).apply(this, arguments));
+	  }
+
+	  _createClass(Footer, [{
+	    key: 'render',
+	    value: function render() {
+
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'footer' },
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'Creado en:'
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'footer_react' },
+	          _react2.default.createElement(
+	            'a',
+	            { href: 'http://www.jaracu.com/curriculum/ReactJS/public/index.html', title: 'Curriculum en ReactJS' },
+	            _react2.default.createElement('img', { src: 'https://upload.wikimedia.org/wikipedia/en/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png', title: 'React' }),
+	            ' React'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'footer_angular' },
+	          _react2.default.createElement(
+	            'a',
+	            { href: 'http://www.jaracu.com/curriculum/AngularJS/dist/index.html', title: 'Curriculum en Angular 4' },
+	            _react2.default.createElement('img', { src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2000px-Angular_full_color_logo.svg.png', title: 'Angular 4' }),
+	            ' Angular'
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Footer;
+	}(_react2.default.Component);
+
 	_reactDom2.default.render(_react2.default.createElement(DatosPersonales, null), document.getElementById('container'));
 
 	_reactDom2.default.render(_react2.default.createElement(Tecnologias, null), document.getElementById('container_2'));
 
 	_reactDom2.default.render(_react2.default.createElement(Experiencias, null), document.getElementById('container_3'));
+
+	_reactDom2.default.render(_react2.default.createElement(Footer, null), document.getElementById('footer'));
 
 /***/ }),
 /* 1 */

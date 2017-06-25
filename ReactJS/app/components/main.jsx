@@ -106,7 +106,7 @@ class Experiencia extends React.Component{
         return (
           <div className="experiencia" key={index}>
           <h2>&#187; {data.company} ({data.from})</h2>
-          <p>{data.description}</p>
+          <p dangerouslySetInnerHTML={{__html: data.description}}/>
           </div>
         )
      });
@@ -114,6 +114,24 @@ class Experiencia extends React.Component{
      return (
         <div>{exp}</div>
      )
+  }
+}
+
+class Footer extends React.Component{
+
+  render(){
+
+    return (
+        <div className="footer">
+          <h1>Creado en:</h1>
+          <div className="footer_react">
+            <a href="http://www.jaracu.com/curriculum/ReactJS/public/index.html" title="Curriculum en ReactJS"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png" title="React" /> React</a>
+          </div>
+          <div className="footer_angular">
+            <a href="http://www.jaracu.com/curriculum/AngularJS/dist/index.html" title="Curriculum en Angular 4"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2000px-Angular_full_color_logo.svg.png" title="Angular 4" /> Angular</a>
+          </div>
+        </div>
+    )
   }
 }
 
@@ -130,4 +148,9 @@ ReactDOM.render(
 ReactDOM.render(
   <Experiencias />,
   document.getElementById('container_3')
+);
+
+ReactDOM.render(
+  <Footer />,
+  document.getElementById('footer')
 );

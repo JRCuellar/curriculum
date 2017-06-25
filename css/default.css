@@ -100,10 +100,30 @@ a{
 	background: #000;
 	color: #fff;
 	border-top:2px solid #fff;
+	display:block;
+	height: 100px;
 }
 
 .footer_react{
 	color: #00d8ff;
+	float:left;
+	padding-left: 10px;
+}
+
+.footer_react a{
+	text-decoration: none;
+	color:#fff;
+}
+
+.footer_angular{
+	color: #fff;
+	float:left;
+	padding-left: 10px;
+}
+
+.footer_angular a{
+	text-decoration: none;
+	color:#fff;
 }
 
 .footer img{
