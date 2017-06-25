@@ -1,0 +1,9 @@
+<div class="container_3">
+    <h1>Experiencia Laboral:</h1>
+    <div class="caja_3">
+        <div class="experiencia" *ngFor="let elem of expList">
+          <h2>&#187; {{elem.company}} ({{elem.from}})</h2>
+          <p innerHTML="{{elem.description}}"></p>
+        </div>
+    </div>
+</div>
